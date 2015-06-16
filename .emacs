@@ -7,6 +7,7 @@
 (defvar my-packages '(
 		      auto-complete
 		      paredit
+		      slime
 		      rainbow-delimiters
 		      markdown-mode
 		      solarized-theme
@@ -53,7 +54,7 @@
 
 ;; rainbow delimiters
 (require 'rainbow-delimiters)
-(global-rainbow-delimiters-mode)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 ;; slime
 (setq inferior-lisp-program "sbcl") ; your Lisp system
